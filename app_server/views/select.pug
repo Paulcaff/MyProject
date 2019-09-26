@@ -1,28 +1,161 @@
 extends layout
 
 block content
-  .row.banner
-    .col-12
-      h1= pageHeader.title
-  .row
-    .col-12.col-md-8
-      form(action="/location", method="get", role="form")
-        .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="name") Name
-          .col-12.col-sm-10
-            input#name.form-control(name="name")
-        .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="rating") Rating
-          .col-12.col-sm-2
-            select#rating.form-control.input-sm(name="rating")
-              option 5
-              option 4
-              option 3
-              option 2
-              option 1
-        .form-group.row
-          label.col-sm-2.col-form-label(for="review") Review
-          .col-sm-10
-            textarea#review.form-control(name="review", rows="5")
-        button.btn.btn-primary.float-right Add my review
-    .col-12.col-md-4
+  h1= title
+  .container.bgimg.padding-5
+    .row.mt-5
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size LooseHead Prop
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100.bg-white.text-align-center
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Hooker
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Tighthead Prop
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+    .row.mt-5
+      .col-4.offset-2
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Second Row
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col-4
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Second Row
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+    .row.mt-5
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Blindside Flanker
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Openside Flanker
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col
+       .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Number 8
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+    .row.mt-5
+      .col-4.offset-2
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Scrumhalf
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col-4
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Flyhalf
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+    .row.mt-5
+      .col-4.offset-2
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Inside Center
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col-4
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Outside Center
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+    .row.mt-5
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Right Winger
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Fullback
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi
+      .col
+        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+          .card-header.text-center.bg-transparent.my-size Left Winger
+          .card-body
+            form(action='/action_page.php')
+              select(name='cars').w-100
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='fiat') Fiat
+                option(value='audi') Audi

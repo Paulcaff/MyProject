@@ -8,8 +8,23 @@ a {
 }
 
 .bgimg{
-background-image: url("../images/pic1.jpg")
+background-image: url("../images/Rugbypitch.png");
+background-size:cover 
 }
+
+.bgimgLogin{
+  background-image: url("../images/rwc.jpg");
+  background-size:cover 
+  }
+
 h1{
   text-align: center
+}
+
+.my-size{
+  font-family: 'Allerta Stencil';
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  
 }
