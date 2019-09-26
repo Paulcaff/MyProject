@@ -1,27 +1,134 @@
 extends layout
 
-include _includes/sharedHTMLfunctions
-
 block content
-  .row.banner
-    .col-12
-      h1= pageHeader.title
-        small &nbsp;#{pageHeader.strapline}
-  .row
-    .col-12.col-md-8
+  h1= title
 
-      each location in locations
-        .card
-          .card-block
-            h4
-              a(href="/location")= location.name
-              small &nbsp;
-                +outputRating(location.rating)
-              span.badge.badge-pill.badge-default.float-right= location.distance
-            p.address= location.address
-            .facilities
-              each facility in location.facilities
-                span.badge.badge-warning= facility
+  .row.mt-5
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: LooseHead Prop
+        .card-body
+          <img src="../../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Hooker
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Tighthead Prop
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
 
-    .col-12.col-md-4
-      p.lead= sidebar
+  .row.mt-5
+    .col-4.offset-2
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Second Row
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col-4
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Second Row
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+
+  .row.mt-5
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Blindside Flanker
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position:  Openside Flanker
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :p Age :
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Number 8
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+
+  .row.mt-5
+    .col-4.offset-2
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Scrumhalf
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col-4
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Flyhalf
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+  .row.mt-5
+    .col-4.offset-2
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Inside Center
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col-4
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Outside Center
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+
+  .row.mt-5
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Right Winger
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Fullback
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
+    .col
+      .card.bg-light.text-dark.w-50.ml-auto.mr-auto
+        .card-header.text-center Position: Left Winger
+        .card-body
+          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          p Player Name :
+          p Player Weight :
+          p Age :
