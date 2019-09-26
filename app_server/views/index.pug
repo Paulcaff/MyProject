@@ -2,4 +2,27 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  .row
+    .col
+      .form-group
+        label(for='username') Username
+        input#username.form-control.is-valid(type='text')
+      .form-group
+        label(for='password') Password
+        input#password.form-control.is-invalid(type='text')
+        .invalid-feedback
+          | Enter Password
+      .form-group
+        label(for='password2') Confirm Password
+        input#password2.form-control.is-invalid(type='text')
+        .invalid-feedback
+          | Password does not match 
+      .text-center    
+        button.btn.btn-primary.text-center login
+    .col.bg-dark
+
+  
+
+  
+  
