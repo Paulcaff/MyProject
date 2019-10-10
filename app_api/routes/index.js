@@ -12,7 +12,7 @@ const ctrlTeams = require('../controllers/team');
   
   //.post(ctrlLocations.locationsCreate);
 router
-  .route('/player/:pid')
+  .route('/team')
   .get(ctrlTeams.findPlayer);
 // router
 //   .route('/locations/:locationid')

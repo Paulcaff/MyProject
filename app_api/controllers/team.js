@@ -8,12 +8,11 @@ const player = mongoose.model('player');
 // };
 
 module.exports.findPlayer = function(req, res){
-    let id = req.params.pid
-    
+      
     player
-    .findById(id)
+    .find({age: { $gte : 20}}, null, {limit: 20})
     .exec(function(err, location){ 
-        send(res, 200, location);
+       send (res, 200, location);
     });
    
 };
