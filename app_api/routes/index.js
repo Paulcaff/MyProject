@@ -6,11 +6,14 @@ const ctrlTeams = require('../controllers/team');
 
 // locations
 
-router
-  .route('/display')
-  .get(ctrlTeams.getTeam);
+// router
+//   .route('/display')
+//   .get(ctrlTeams.getTeam);
+  
   //.post(ctrlLocations.locationsCreate);
-
+router
+  .route('/player/:pid')
+  .get(ctrlTeams.findPlayer);
 // router
 //   .route('/locations/:locationid')
 //   .get(ctrlLocations.locationsReadOne)

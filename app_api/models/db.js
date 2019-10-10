@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-let dbURI = 'mongodb+srv://paulcaff:srqf8vwq@myproject-whnnv.mongodb.net/admin';
+let dbURI = 'mongodb+srv://paulcaff:<password>@myproject-whnnv.mongodb.net/MyProject';
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }
