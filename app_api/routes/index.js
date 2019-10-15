@@ -18,5 +18,9 @@ router
   .get(ctrlUsers.findUser)
   .post(ctrlUsers.createUser);
 
+  router
+  .route('/userpaul')
+  .get(ctrlUsers.findUserByUsername);
+
 
 module.exports = router;

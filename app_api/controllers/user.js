@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const user = mongoose.model('user');
+
+
 module.exports.findUser = function(req, res){
     if(req.params){ 
         user
@@ -7,6 +9,28 @@ module.exports.findUser = function(req, res){
             .exec(function(err, user){
                 if(!user){
                     send (res, 404, "the player was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+                else{
+                    send (res, 200, user);
+                }
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
+module.exports.findUserByUsername = function(req, res){
+    if(req.params){ 
+        user
+            .find({username: "paulcaff"})
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the user was not found");
                 }
                 else if(err){ 
                     send (res, 404, err);
