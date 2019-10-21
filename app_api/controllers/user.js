@@ -74,6 +74,154 @@ module.exports.createUser = function(req, res){
      }
  }
 
+//update firstname
+module.exports.updateFirstname = function(req, res){
+
+
+    if(req.params){ 
+        user
+            .findById(req.params.userId)
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the player was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+
+                user.firstname = "Naka";
+                user.save(function(err, worked){
+                    if(err){
+                        send(res, 404, err)
+                    }
+                    send(res, 200, worked)
+                })
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
+//update username
+module.exports.updateLastname = function(req, res){
+
+
+    if(req.params){ 
+        user
+            .findById(req.params.userId)
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the player was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+
+                user.lastname = "jima";
+                user.save(function(err, worked){
+                    if(err){
+                        send(res, 404, err)
+                    }
+                    send(res, 200, worked)
+                })
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
+//update username
+ module.exports.updateUsername = function(req, res){
+
+
+    if(req.params){ 
+        user
+            .findById(req.params.userId)
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the player was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+
+                user.username = "Nakajima";
+                user.save(function(err, worked){
+                    if(err){
+                        send(res, 404, err)
+                    }
+                    send(res, 200, worked)
+                })
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
+module.exports.updateEmail = function(req, res){
+
+
+    if(req.params){ 
+        user
+            .findById(req.params.userId)
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the player was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+
+                user.email = "Nakajima@140.com";
+                user.save(function(err, worked){
+                    if(err){
+                        send(res, 404, err)
+                    }
+                    send(res, 200, worked)
+                })
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
+module.exports.updatePassword = function(req, res){
+
+
+    if(req.params){ 
+        user
+            .findById(req.params.userId)
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the player was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+
+                user.password = "Nakajima123";
+                user.save(function(err, worked){
+                    if(err){
+                        send(res, 404, err)
+                    }
+                    send(res, 200, worked)
+                })
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
  
 var send = function(res, status, content){
     res.status(status);
