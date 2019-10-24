@@ -8,6 +8,7 @@ router
   .route('/players')
   .get(ctrlTeams.findPlayer)
   .post(ctrlTeams.createPlayer)
+  .delete(ctrlTeams.deletePlayer);
   
 router
   .route('/age/:playerId')
