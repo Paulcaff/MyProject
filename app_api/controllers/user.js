@@ -222,6 +222,28 @@ module.exports.updatePassword = function(req, res){
     }
 }
 
+module.exports.deleteUserByUsername = function(req, res){
+    if(req.params){ 
+        user
+            .remove({username: "paulcaff"})
+            .exec(function(err, user){
+                if(!user){
+                    send (res, 404, "the user was not found");
+                }
+                else if(err){ 
+                    send (res, 404, err);
+                }
+                else{
+                    send (res, 200, user);
+                }
+            });
+   
+    }
+    else{
+        send (res, 404, "URL Problem");
+    }
+}
+
  
 var send = function(res, status, content){
     res.status(status);

@@ -36,7 +36,8 @@ router
   router
   .route('/user')
   .get(ctrlUsers.findUser)
-  .post(ctrlUsers.createUser);
+  .post(ctrlUsers.createUser)
+  .delete(ctrlUsers.deleteUserByUsername);
 
   router
   .route('/userpaul')
