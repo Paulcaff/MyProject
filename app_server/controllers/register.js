@@ -29,6 +29,27 @@ var apiOptions = {server : 'http://localhost:3000'};
         } 
     })
   };
+
+  const loginUser = function(req,res){
+    console.log("logging in");
+      var path = '/api/userpaul';
+     requestOptions={
+       url: apiOptions.server + path,
+       method : 'GET',
+       json :{
+         username : req.body.username
+       }
+     } 
+      request(
+        requestOptions,
+        function(err, response, body){ 
+          if (response.statusCode == 200) { 
+          console.log("user registered"); 
+          } else { 
+          console.log("failed",err); 
+          } 
+      })
+    };
     
 
 

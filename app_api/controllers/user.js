@@ -25,6 +25,7 @@ module.exports.findUser = function(req, res){
 }
 
 module.exports.findUserByUsername = function(req, res){
+    console.log("calling method")
     if(req.params){ 
         user
             .find({username: "paulcaff"})
