@@ -4,9 +4,18 @@ const ctrlRegister = require('../controllers/register');
 const ctrlTeam = require('../controllers/team');
 
 /* Locations pages */
-router.get('/', ctrlRegister.index);
-router.get('/register', ctrlRegister.register);
-router.get('/select', ctrlTeam.selectTeam);
-router.get('/display', ctrlTeam.display);
+router
+    .get('/', ctrlRegister.index);
+
+router
+    .get('/register', ctrlRegister.register)
+    .post('/register', ctrlRegister.registerUser);
+
+router
+    .get('/select', ctrlTeam.selectTeam);
+
+router
+    .get('/display', ctrlTeam.display);
+
 
 module.exports = router;

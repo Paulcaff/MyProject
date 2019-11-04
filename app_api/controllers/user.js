@@ -47,7 +47,7 @@ module.exports.findUserByUsername = function(req, res){
 }
 
 module.exports.createUser = function(req, res){
-   
+   console.log("bbbbb")
      if(req.params){
           
          user
