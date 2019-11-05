@@ -37,14 +37,15 @@ var apiOptions = {server : 'http://localhost:3000'};
        url: apiOptions.server + path,
        method : 'GET',
        json :{
-         username : req.body.username
+         username : req.body.username,
+         password : req.body.password
        }
      } 
       request(
         requestOptions,
         function(err, response, body){ 
           if (response.statusCode == 200) { 
-          console.log("user registered"); 
+          console.log("user is already registered"); 
           } else { 
           console.log("failed",err); 
           } 
@@ -68,4 +69,4 @@ const index = function(req, res){
   })
 };
 
-module.exports = { register, index, registerUser};
+module.exports = { register, index, registerUser,loginUser};

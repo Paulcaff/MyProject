@@ -5,7 +5,8 @@ const ctrlTeam = require('../controllers/team');
 
 /* Locations pages */
 router
-    .get('/', ctrlRegister.index);
+    .get('/', ctrlRegister.index)
+    .post('/',ctrlRegister.loginUser);
 
 router
     .get('/register', ctrlRegister.register)

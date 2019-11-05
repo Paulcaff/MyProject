@@ -5,18 +5,18 @@ block content
 
   .row
     .col
-      form(action="/", method="get")
+      form(action="/", method="post")
         .form-group
           label(for='username') Username
           input#username.form-control.is-valid(type='text' name='username')
         .form-group
           label(for='password') Password
-          input#password.form-control.is-invalid(type='text')
+          input#password.form-control.is-invalid(type='password' name='password')
           .invalid-feedback
             | Enter Password
         .form-group
           label(for='password2') Confirm Password
-          input#password2.form-control.is-invalid(type='text')
+          input#password2.form-control.is-invalid(type='password' name='confirm')
           .invalid-feedback
             | Password does not match 
         .text-center    

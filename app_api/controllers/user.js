@@ -25,17 +25,16 @@ module.exports.findUser = function(req, res){
 }
 
 module.exports.findUserByUsername = function(req, res){
-    console.log("calling method")
+    console.log(req.body.username);
+    console.log(req.body.password);
     if(req.params){ 
         user
-            .find({username: "paulcaff"})
+            .find({username: req.body.username, password :req.body.password})
             .exec(function(err, user){
-                if(!user){
-                    send (res, 404, "the user was not found");
+                if(user == 0){
+                    send (res, 209, "the user was not found");
                 }
-                else if(err){ 
-                    send (res, 404, err);
-                }
+
                 else{
                     send (res, 200, user);
                 }
