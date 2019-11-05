@@ -8,7 +8,7 @@ module.exports.findUser = function(req, res){
             .find()
             .exec(function(err, user){
                 if(!user){
-                    send (res, 404, "the player was not found");
+                    send (res, 404, "the user was not found");
                 }
                 else if(err){ 
                     send (res, 404, err);
@@ -25,25 +25,39 @@ module.exports.findUser = function(req, res){
 }
 
 module.exports.findUserByUsername = function(req, res){
-    console.log(req.body.username);
-    console.log(req.body.password);
-    if(req.params){ 
-        user
-            .find({username: req.body.username, password :req.body.password})
-            .exec(function(err, user){
-                if(user == 0){
-                    send (res, 209, "the user was not found");
-                }
+    if(req.body.password === req.body.confirm){
+        
+        console.log(req.body.username);
+        console.log(req.body.password);
+        console.log(req.body.confirm);
+    
+    
+        if(req.params){ 
+            user
+                .find({username: req.body.username, password :req.body.password})
+                .exec(function(err, user){
+                    if(user == 0){
+                        send (res, 209, "the user was not found");
+                    }
 
-                else{
-                    send (res, 200, user);
-                }
-            });
-   
+                    else{
+                        send (res, 200, user);
+                    }
+                });
+    
+        }
+        else{
+            send (res, 404, "URL Problem");
+        }
     }
+    
     else{
-        send (res, 404, "URL Problem");
-    }
+        console.log(req.body.username);
+        console.log(req.body.password);
+        console.log(req.body.confirm);
+        console.log("not matching");
+
+}
 }
 
 module.exports.createUser = function(req, res){

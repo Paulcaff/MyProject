@@ -31,6 +31,7 @@ var apiOptions = {server : 'http://localhost:3000'};
   };
 
   const loginUser = function(req,res){
+    if(req.body.password === req.body)
     console.log("logging in");
       var path = '/api/userpaul';
      requestOptions={
@@ -38,16 +39,17 @@ var apiOptions = {server : 'http://localhost:3000'};
        method : 'GET',
        json :{
          username : req.body.username,
-         password : req.body.password
+         password : req.body.password,
+         confirm : req.body.confirm
        }
      } 
       request(
         requestOptions,
         function(err, response, body){ 
           if (response.statusCode == 200) { 
-          console.log("user is already registered"); 
+          console.log("user logging in"); 
           } else { 
-          console.log("failed",err); 
+          console.log("User doesnt exist",err); 
           } 
       })
     };
