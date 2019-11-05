@@ -61,31 +61,41 @@ module.exports.findUserByUsername = function(req, res){
 }
 
 module.exports.createUser = function(req, res){
-   console.log("bbbbb")
-     if(req.params){
-          
-         user
-             .create({
-                 firstname: req.body.firstname,
-                 lastname: req.body.lastname,
-                 username: req.body.username,
-                 email: req.body.email,
-                 password: req.body.password
-             },            
-             function(err, user){
-                
-                  if(err){ 
-                     send (res, 404, err);
-                 }
-                 else{
-                     send (res, 200, user);
-                 }
-             });
-    
-     }
-     else{
-         send (res, 404, "URL Problem");
-     }
+    if(req.body.password === req.body.confirm){
+        
+        console.log(req.body.password);
+        console.log(req.body.confirm);
+        if(req.params){
+            
+            user
+                .create({
+                    firstname: req.body.firstname,
+                    lastname: req.body.lastname,
+                    username: req.body.username,
+                    email: req.body.email,
+                    password: req.body.password,
+                    confirm : req.body.confirm
+                },            
+                function(err, user){
+                    
+                    if(err){ 
+                        send (res, 404, err);
+                    }
+                    else{
+                        send (res, 200, user);
+                    }
+                });
+        
+        }
+        else{
+            send (res, 404, "URL Problem");
+        }
+    }
+    else{
+        console.log(req.body.password);
+        console.log(req.body.confirm);
+        console.log("User cannot be created until passwords are matching")
+    }
  }
 
 //update firstname

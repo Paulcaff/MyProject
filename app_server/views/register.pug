@@ -23,12 +23,12 @@ block content
           input#username.form-control.is-valid(type='text' name="email")
         .form-group
           label(for='password') Enter Password
-          input#password.form-control.is-invalid(type='password')
+          input#password.form-control.is-invalid(type='password' name="password")
           .invalid-feedback
             | Enter Password
         .form-group
           label(for='password2') Confirm Password
-          input#password2.form-control.is-invalid(type='password' name="password")
+          input#password2.form-control.is-invalid(type='password' name="confirm")
           .invalid-feedback
             | Password does not match 
         .text-center    
