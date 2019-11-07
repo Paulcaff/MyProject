@@ -55,8 +55,7 @@ module.exports.createUser = function(req, res){
                     lastname: req.body.lastname,
                     username: req.body.username,
                     email: req.body.email,
-                    password: req.body.password,
-                    confirm : req.body.confirm
+                    password: req.body.password                 
                 },            
                 function(err, user){
                     
@@ -179,7 +178,7 @@ module.exports.updateEmail = function(req, res){
                     send (res, 404, err);
                 }
 
-                user.email = "Nakajima@140.com";
+                user.email = "Nakajima@EMAIL---UPDATED.com";
                 user.save(function(err, worked){
                     if(err){
                         send(res, 404, err)

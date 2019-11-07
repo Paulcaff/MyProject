@@ -12,7 +12,7 @@ var apiOptions = {server : 'http://localhost:3000'};
     console.log(req.body.password);
     console.log(req.body.confirm);
 
-    if(req.body.password === req.body.confirm){
+    if(req.body.password === req.body.confirm && req.body.password != ""){
 
         var path = '/api/user';
       requestOptions={
@@ -47,7 +47,8 @@ var apiOptions = {server : 'http://localhost:3000'};
   const loginUser = function(req,res){
   
     console.log("logging in");
-    if(req.body.password === req.body.confirm){
+    console.log(req.body.password);
+    if(req.body.password === req.body.confirm && req.body.password != ""){
       var path = '/api/userpaul';
      requestOptions={
        url: apiOptions.server + path,
@@ -66,12 +67,13 @@ var apiOptions = {server : 'http://localhost:3000'};
           teampages.selectTeam(req,res); 
           } else { 
           console.log("User doesnt exist",err);
+          console.log(req.body.password);
           register(req,res);
           } 
       })
     }
     else{
-      console.log("passwords not matching");
+      console.log("passwords not matching or not entered");
       
     }
     };

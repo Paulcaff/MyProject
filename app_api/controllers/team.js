@@ -230,7 +230,7 @@ module.exports.updateWeight = function(req, res){
 module.exports.deletePlayer = function(req, res){
     if(req.params){ 
         player
-            .remove({username: "Nakajima"})
+            .remove({username: "aa"})
             .exec(function(err, player){
                 if(!player){
                     send (res, 404, "the user was not found");
