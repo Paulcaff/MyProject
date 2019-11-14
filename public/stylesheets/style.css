@@ -23,8 +23,16 @@ h1{
 
 .my-size{
   font-family: 'Allerta Stencil';
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
-  color: white;
-  
+  color: blue;
+  text-align: center
+}
+
+.normal{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 100;
+  color:black;
+  text-align: left;
 }

@@ -1,14 +1,18 @@
 extends layout
 
 block content
+
+
   h1= title
   .row
     .col
       .row
         .col-2.mt-5
+          .h4.text-center Pick Team
           each player in players
             ul.list-group.mb-1
-                a.list-group-item(href = "#")=player.name
+                a.list-group-item(href = "#" onclick=`addToArray(${player})`)=player.name
+                
 
                
 
@@ -16,82 +20,85 @@ block content
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent LooseHead Prop
+                .card-header.my-size LooseHead Prop
                 .card-body 
                 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Hooker
-                .card-body
+               .card-header.my-size Hooker
+                .card-body 
+                .p.normal.text-center name: Cian Healy
+                
+              
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Tighthead Prop
+               .card-header.my-size Tighthead Prop
                 .card-body
           
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Number 4
+               .card-header.my-size Number 4
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Number 5
+               .card-header.my-size Number 5
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Tighthead Prop
+               .card-header.my-size Tighthead Prop
                 .card-body
           
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent LooseHead Prop
+               .card-header.my-size LooseHead Prop
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Number 8
+               .card-header.my-size Number 8
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Scrumhalf
+               .card-header.my-size Scrumhalf
                 .card-body
 
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Outhalf
+               .card-header.my-size Outhalf
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Inside Center
+               .card-header.my-size Inside Center
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Outside Center
+               .card-header.my-size Outside Center
                 .card-body
 
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Left Wing
+               .card-header.my-size Left Wing
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Full Back
+               .card-header.my-size Full Back
                 .card-body
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-                .card-header.text-center.bg-transparent Right Wing
+               .card-header.my-size Right Wing
                 .card-body
 
       
@@ -101,3 +108,13 @@ block content
            
   .text-center    
               button.btn.btn-success.btn-lg.text-center.mx-5(type = "submit") Display Team
+  script(type='text/javascript').
+    var players = [];
+    function addToArray(player){
+      window.alert("1");
+      var position = (player.number)-1;
+       window.alert("2");
+      players[position] = player;
+      window.alert("3"+ player); 
+    }
+    
