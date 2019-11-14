@@ -16,6 +16,7 @@ module.exports.findPlayer = function(req, res){
                     send (res, 404, err);
                 }
                 else{
+                    console.log("here");
                     send (res, 200, player);
                 }
             });

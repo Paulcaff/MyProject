@@ -2,91 +2,100 @@ extends layout
 
 block content
   h1= title
-  .container.padding-5
-
+  .row
     .col
-      .row.mt-5
+      .row
+        .col-2.mt-5
+          each player in players
+            ul.list-group.mb-1
+                a.list-group-item(href = "#")=player.name
+
+               
+
         .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size LooseHead Prop
-            .card-body
-            
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Hooker
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Tighthead Prop
-            .card-body
+          .row.mt-5
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent LooseHead Prop
+                .card-body 
+                
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Hooker
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Tighthead Prop
+                .card-body
+          
+          .row.mt-5
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Number 4
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Number 5
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Tighthead Prop
+                .card-body
+          
+          .row.mt-5
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent LooseHead Prop
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Number 8
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Scrumhalf
+                .card-body
+
+          .row.mt-5
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Outhalf
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Inside Center
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Outside Center
+                .card-body
+
+          .row.mt-5
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Left Wing
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Full Back
+                .card-body
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+                .card-header.text-center.bg-transparent Right Wing
+                .card-body
+
       
-      .row.mt-5
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Number 4
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Number 5
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Tighthead Prop
-            .card-body
-      
-      .row.mt-5
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size LooseHead Prop
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Number 8
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Scrumhalf
-            .card-body
-
-      .row.mt-5
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Outhalf
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Inside Center
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Outside Center
-            .card-body
-
-      .row.mt-5
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Left Wing
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Full Back
-            .card-body
-            
-        .col
-          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-            .card-header.text-center.bg-transparent.my-size Right Wing
-            .card-body
-
-    .col
+  |    
            
     
            
