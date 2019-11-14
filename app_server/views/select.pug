@@ -2,162 +2,93 @@ extends layout
 
 block content
   h1= title
-  .container.bgimg.padding-5
-    .row.mt-5
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size LooseHead Prop
-          .card-body
-            form(action='/select' method="post")
-              select(name="LooseHead Prop").w-100.bg-white.text-align-center
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Hooker
-          .card-body
-            form(action='/select' method="post")
-              select(name='Hooker').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Tighthead Prop
-          .card-body
-            form(action='/select' method="post")
-              select(name='Tighthead Prop').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-    .row.mt-5
-      .col-4.offset-2
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Number 4
-          .card-body
-            form(action='/select' method="post")
-              select(name='Number 4').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col-4
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Number 5
-          .card-body
-            form(action='/select' method="post")
-              select(name='Number 5').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-    .row.mt-5
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Blindside Flanker
-          .card-body
-            form(action='/select' method="post")
-              select(name='Blindside Flanker').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Openside Flanker
-          .card-body
-            form(action='/select' method="post")
-              select(name='Openside Flanker').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col
-       .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Number 8
-          .card-body
-            form(action='/select' method="post")
-              select(name='Number 8').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-    .row.mt-5
-      .col-4.offset-2
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Scrumhalf
-          .card-body
-            form(action='/select' method="post")
-              select(name='Scrumhalf').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col-4
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Flyhalf
-          .card-body
-            form(action='/select' method="post")
-              select(name='Flyhalf').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-    .row.mt-5
-      .col-4.offset-2
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Inside Center
-          .card-body
-            form(action='/select' method="post")
-              select(name="Inside Center").w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col-4
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Outside Center
-          .card-body
-            form(action='/select' method="post")
-              select(name='Outside Center').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-    .row.mx-5
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Right Winger
-          .card-body
-            form(action='/select' method="post")
-              select(name='Right Winger').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Fullback
-          .card-body
-            form(action='/select' method="post")
-              select(name='Fullback').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
-      .col
-        .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-          .card-header.text-center.bg-transparent.my-size Left Winger
-          .card-body
-            form(action='/select' method="post")
-              select(name='Left Winger').w-100
-                option(value='volvo') Volvo
-                option(value='saab') Saab
-                option(value='fiat') Fiat
-                option(value='audi') Audi
+  .container.padding-5
+
+    .col
+      .row.mt-5
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size LooseHead Prop
+            .card-body
+            
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Hooker
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Tighthead Prop
+            .card-body
+      
+      .row.mt-5
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Number 4
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Number 5
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Tighthead Prop
+            .card-body
+      
+      .row.mt-5
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size LooseHead Prop
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Number 8
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Scrumhalf
+            .card-body
+
+      .row.mt-5
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Outhalf
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Inside Center
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Outside Center
+            .card-body
+
+      .row.mt-5
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Left Wing
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Full Back
+            .card-body
+            
+        .col
+          .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+            .card-header.text-center.bg-transparent.my-size Right Wing
+            .card-body
+
+    .col
+           
+    
+           
   .text-center    
               button.btn.btn-success.btn-lg.text-center.mx-5(type = "submit") Display Team
