@@ -52,5 +52,18 @@ const userSchema = new mongoose.Schema({
 }
 });
 
+const teamSchema = new mongoose.Schema({ 
+    username:{
+        type: String,
+    required: true
+},
+    team:{
+        type: [],
+    
+}
+});
+
+
 mongoose.model('player', playerSchema);
 mongoose.model('user', userSchema);
+mongoose.model('team', teamSchema);

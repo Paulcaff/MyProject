@@ -6,9 +6,6 @@ var apiOptions = {server : 'http://localhost:3000'};
   }
   
   const getPlayers = function(req,res){
-  
-      
-  
     };
 
 /* GET home page */

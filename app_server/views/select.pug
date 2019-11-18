@@ -11,24 +11,22 @@ block content
           .h4.text-center Pick Team
           each player in players
             ul.list-group.mb-1
-                a.list-group-item(href = "#" onclick=`addToArray(${player})`)=player.name
+                a.list-group-item(href = "#" onclick=`addToArray(${JSON.stringify(player)})`)=player.name
                 
-
-               
-
         .col
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                 .card-header.my-size LooseHead Prop
-                .card-body 
+                .card-body
+                 .p.normal.text-center Name: 
                 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Hooker
                 .card-body 
-                .p.normal.text-center name: Cian Healy
+                .p.normal.text-center Name: 
                 
               
                 
@@ -36,70 +34,82 @@ block content
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Tighthead Prop
                 .card-body
+                .p.normal.text-center Name:
           
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Number 4
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Number 5
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Tighthead Prop
                 .card-body
+                .p.normal.text-center Name:
           
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size LooseHead Prop
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Number 8
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Scrumhalf
                 .card-body
-
+                .p.normal.text-center Name:
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Outhalf
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Inside Center
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Outside Center
                 .card-body
+                .p.normal.text-center Name:
 
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Left Wing
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Full Back
                 .card-body
+                .p.normal.text-center Name:
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Right Wing
                 .card-body
+                .p.normal.text-center Name:
 
       
   |    
@@ -108,13 +118,14 @@ block content
            
   .text-center    
               button.btn.btn-success.btn-lg.text-center.mx-5(type = "submit") Display Team
+  
   script(type='text/javascript').
-    var players = [];
+    var players = new Array(15);
     function addToArray(player){
       window.alert("1");
-      var position = (player.number)-1;
-       window.alert("2");
-      players[position] = player;
-      window.alert("3"+ player); 
-    }
+       var position = (player.number)-1;
+       window.alert("2" + "array position" + position);
+       players[position] = player;
+       window.alert("3"+ player.name + " "+ player.position+ " " + player.weight+ " " + player.age+ " " + player.image); 
+     }
     
