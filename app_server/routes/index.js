@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ctrlRegister = require('../controllers/register');
 const ctrlTeam = require('../controllers/team');
+const ctrlUserTeam = require('../controllers/userTeamList');
 
 /* Locations pages */
 router
@@ -17,6 +18,9 @@ router
 
 router
     .get('/display', ctrlTeam.display);
+
+router
+    .get('/userteam', ctrlUserTeam.createUserTeam);
 
 
 module.exports = router;

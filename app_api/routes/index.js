@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const ctrlUsers = require('../controllers/user');
 const ctrlTeams = require('../controllers/team');
+const ctrlUserTeams = require('../controllers/userTeamList');
 
 router
   .route('/players')
@@ -63,6 +64,11 @@ router
   router
   .route('/password/:userId')
   .put(ctrlUsers.updatePassword);
+
+  router
+  .route('/userteam')
+  .get(ctrlUserTeams.findTeamUser)
+  .post(ctrlUserTeams.teamCreate);
 
 
 module.exports = router;

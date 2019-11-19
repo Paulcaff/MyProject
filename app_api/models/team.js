@@ -57,10 +57,7 @@ const teamSchema = new mongoose.Schema({
         type: String,
     required: true
 },
-    team:{
-        type: [],
-    
-}
+    team:[playerSchema]   
 });
 
 
