@@ -34,13 +34,18 @@ var apiOptions = {server : 'http://localhost:3000'};
             console.log("user registered"); 
             teampages.selectTeam(req,res);
             } else { 
-            console.log("failed"); 
-            register(req,res);
+              res.render('register',{
+                title: 'Login',
+                message: 'Register Failed !!! Make sure all fields are filled'  
+              })
             } 
         })
   }
   else{
-    console.log("passwords not matching"); 
+    res.render('register',{
+      title: 'Login',
+      message: 'Passwords not matching !!! Create account to log in'  
+    }) 
   } 
   };
 
@@ -66,17 +71,23 @@ var apiOptions = {server : 'http://localhost:3000'};
           console.log("user logging in");
           teampages.selectTeam(req,res); 
           } else { 
-          console.log("User doesnt exist",err);
-          console.log(req.body.password);
-          register(req,res);
+            res.render('register',{
+              title: 'Login',
+              message: 'User not found!!! Create account to log in'  
+            })
           } 
       })
     }
     else{
-      console.log("passwords not matching or not entered");
+      res.render('index',{
+        title: 'Login',
+        message: 'passwords not matching or entered'  
+      })
+     
       
+    
     }
-    };
+  };
 
 const register = function(req, res){
   res.render('register',{

@@ -6,8 +6,7 @@ block content
     
   .row
     .col
-      .alert.alert-danger
-        strong This alert box could indicate a dangerous or potentially negative action.
+      .alert.alert-danger=message
       form(action="/", method="post")
         .form-group
           label(for='username') Username
