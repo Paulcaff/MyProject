@@ -51,6 +51,57 @@ module.exports.teamCreate = function(req, res){
      }
  }
 
+ module.exports.teamPlayersAdd = function(req, res){
+    // send(res,100,"body.position");
+    var username = req.body.username;
+    if(username){
+        team
+        .find({username: req.body.username})
+            .exec(
+                function(err,team){
+                    if(team.length == 0){
+                        send (res, 400, "the user was not found");
+                    }
+                    else{
+                        console.log("heeeeeereeeeee")
+                        doAddPlayer(req,res,team[0]);
+                        send (res, 200, team);
+                    }
+                }
+            );
+
+    } else {
+        send(res,404, "not Found, username required");
+    }
+}
+
+
+var doAddPlayer = function(req,res,team){
+   console.log("Team" + team.username);
+    if(!team){
+        send(res,404,"team not found");
+    }
+    else{
+        team.team.set(req.body.number -1,{
+            position: req.body.position,
+            name: req.body.name,
+            age: req.body.age,
+            weight: req.body.weight,
+            image: req.body.image,
+            number: req.body.number
+
+        });
+        team.save(function(err,team){
+            if(err){
+                send(res,400,err);
+            }
+        })
+    }
+}
+
+
+
+
  var send = function(res, status, content){
     res.status(status);
     res.json(content);

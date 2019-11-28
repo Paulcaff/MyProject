@@ -3,28 +3,28 @@ const mongoose = require('mongoose');
 const playerSchema = new mongoose.Schema({ 
     position:{
         type: String,
-    required: true
+    //required: true
 },
     name:{
         type: String,
-    required: true
+    //required: true
 },
     weight:{
         type: Number,
-        required: true
+      //  required: true
 },
     age:{
         type: Number,
-        required: true
+        //required: true
 },
     image:{
         type: String,
-        required: true
+        //required: true
     
 },
     number:{
         type: Number,
-        required: true
+        //required: true
 
 }
 });

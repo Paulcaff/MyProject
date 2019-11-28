@@ -70,5 +70,10 @@ router
   .get(ctrlUserTeams.findTeamUser)
   .post(ctrlUserTeams.teamCreate);
 
+  router
+  .route('/userteamPlayers')
+  .post(ctrlUserTeams.teamPlayersAdd);
+  
+
 
 module.exports = router;
