@@ -6,6 +6,15 @@ block content
   h1= title
   .row
     .col
+    .col.text-center.my-size
+       form(action="/", method="post")
+        .form-group
+          label(for='username') Team Name
+          input#username.form-control.is-valid(type='text' name='username')
+    .col
+ 
+  .row
+    .col
       .row
         .col-2.mt-5
           .h4.text-center Pick Team
