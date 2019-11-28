@@ -30,14 +30,8 @@ module.exports.teamCreate = function(req, res){
          team
              .create({
                  username: req.body.username,
-                 team: [{
-                    number :req.body.number,
-                    position: req.body.position,
-                    name: req.body.name,
-                    weight: req.body.weight,
-                    age: req.body.age,
-                    image: req.body.image
-                  }]
+                 team: [{}]
+                  
              },            
              function(err, team){
                 
