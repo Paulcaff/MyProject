@@ -9,6 +9,7 @@ var apiOptions = {server : 'http://localhost:3000'};
 
 /* GET home page */
 const createUserTeam = function(req, res){
+  console.log("ddddddddddd")
   var path = '/api/userteam';
      requestOptions={
        url: apiOptions.server + path,
@@ -19,11 +20,12 @@ const createUserTeam = function(req, res){
       request(
         requestOptions,
         function(err, response, body){
-          console.log(response); 
+          console.log(response.statusCode); 
           if (response.statusCode == 200) {
             console.log(body);
             res.render('select',{
               title:'Team Display HEREEEEE', 
+
               //players: body
               
             })
@@ -37,6 +39,16 @@ const createUserTeam = function(req, res){
       })
 
 }
+
+// const createUserTeam = function(req, res){
+  
+//             res.render('select',{
+//               title:'Team Display HEREEEEE', 
+//               loosehead: loosehead
+              
+//             }) 
+      
+// }
 
 
 

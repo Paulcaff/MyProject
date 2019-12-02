@@ -67,7 +67,7 @@ router
 
   router
   .route('/userteam')
-  .get(ctrlUserTeams.findTeamUser)
+  .get(ctrlUserTeams.teamPlayersAll)
   .post(ctrlUserTeams.teamCreate);
 
   router

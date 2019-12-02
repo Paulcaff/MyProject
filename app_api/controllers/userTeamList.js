@@ -99,6 +99,29 @@ var doAddPlayer = function(req,res,team){
     }
 }
 
+module.exports.teamPlayersAll = function(req, res){
+    // send(res,100,"body.position");
+    var username = "pcaff";
+    if(username){
+        team
+        .find({username: "pcaff"})
+            .exec(
+                function(err,team){
+                    if(team.length == 0){
+                        send (res, 400, "the user was not found");
+                    }
+                    else{
+                        console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                        send (res, 200, team[0].team);
+                    }
+                }
+            );
+
+    } else {
+        send(res,404, "not Found, username required");
+    }
+}
+
 
 
 

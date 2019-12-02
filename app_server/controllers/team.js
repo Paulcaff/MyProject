@@ -10,7 +10,7 @@ var apiOptions = {server : 'http://localhost:3000'};
 
 /* GET home page */
 const selectTeam = function(req, res){
-  var path = '/api/players';
+  var path = '/api/userteam';
      requestOptions={
        url: apiOptions.server + path,
        method : 'GET',
@@ -20,12 +20,12 @@ const selectTeam = function(req, res){
       request(
         requestOptions,
         function(err, response, body){
-          console.log(response); 
+         // console.log(response); 
           if (response.statusCode == 200) {
             console.log(body);
             res.render('select',{
               title:'Team Display', 
-              players: body
+              playersel: body
               
             })
 
@@ -61,7 +61,7 @@ const display = function(req, res){
             })
 
           } else{ 
-          console.log("players not dound",err);
+          console.log("players not found",err);
           res.render('display',{
             title:'Team Display', 
           })

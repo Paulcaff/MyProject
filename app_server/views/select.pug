@@ -18,9 +18,9 @@ block content
       .row
         .col-2.mt-5
           .h4.text-center Pick Team
-          each player in players
-            ul.list-group.mb-1
-                a.list-group-item(href = "#" onclick=`addToArray(${JSON.stringify(player)})`)=player.name
+          //each player in players
+           // ul.list-group.mb-1
+               // a.list-group-item(href = "#" onclick=`addToArray(${JSON.stringify(player)})`)=player.name
                 
         .col
           .row.mt-5
@@ -28,14 +28,14 @@ block content
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                 .card-header.my-size LooseHead Prop
                 .card-body
-                 .p.normal.text-center Name: 
+                 .p.normal.text-center=playersel[0].name 
                 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Hooker
                .card-body 
-                  .p.normal.text-center Name: 
+                  .p.normal.text-center=playersel[3].name
                 
               
                 
@@ -120,8 +120,7 @@ block content
                .card-body
                  .p.normal.text-center Name:
 
-      
-  |    
+   
            
     
            
@@ -130,11 +129,13 @@ block content
   
   script(type='text/javascript').
     var players = new Array(15);
+    var playersel = new Array(15);
     function addToArray(player){
       window.alert("1");
        var position = (player.number)-1;
        window.alert("2" + "array position" + position);
-       players[position] = player;
-       window.alert("3"+ player.name + " "+ player.position+ " " + player.weight+ " " + player.age+ " " + player.image); 
+       window.alert("3"+ player.name + " "+ player.position+ " " + player.weight+ " " + player.age+ " " + player.image);
+       playersel[position] = player;
+       window.alert(loosehead) 
      }
     
