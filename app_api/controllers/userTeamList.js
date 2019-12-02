@@ -25,6 +25,7 @@ module.exports.findTeamUser = function(req, res){
 
 module.exports.teamCreate = function(req, res){
     // send(res,100,"body.position");
+    console.log("getting called OOOOOOOOOOOOOOOO")
      if(req.params){
           
          team
@@ -40,7 +41,22 @@ module.exports.teamCreate = function(req, res){
                      send (res, 404, err);
                  }
                  else{
-                     send (res, 200, team);
+                    for(var i=0; i<15; i++){
+                        team.team.set(i,{
+                            
+                            name: "",
+                           
+                
+                        });
+                        team.save(function(err,team){
+                            if(err){
+                                send(res,400,err);
+                            }
+                        })
+                    } 
+                    
+                    send (res, 200, team);
+
                  }
              });
     
@@ -53,10 +69,10 @@ module.exports.teamCreate = function(req, res){
 
  module.exports.teamPlayersAdd = function(req, res){
     console.log('DDD')
-    var username = "pcaff";
+    var username = req.params.username;
     if(username){
         team
-        .find({username: "pcaff"})
+        .find({username: req.params.username})
             .exec(
                 function(err,team){
                     if(team.length == 0){
@@ -83,12 +99,8 @@ var doAddPlayer = function(req,res,team){
     }
     else{
         team.team.set(req.query.number -1,{
-            //position: req.body.position,
-            name: req.query.name,
-            //age: req.body.age,
-            //weight: req.body.weight,
-            //image: req.body.image,
-            //number: req.body.number
+            
+            name: req.query.name,         
 
         });
         team.save(function(err,team){
@@ -122,9 +134,6 @@ module.exports.teamPlayersAll = function(req, res){
         send(res,404, "not Found, username required");
     }
 }
-
-
-
 
  var send = function(res, status, content){
     res.status(status);

@@ -1,5 +1,6 @@
 const request = require('request');
-const teampages = require('../controllers/team')
+const teampages = require('../controllers/team');
+const teamCreate = require('../controllers/userTeamList')
 var apiOptions = {server : 'http://localhost:3000'};
  
   if (process.env.NODE_ENV === 'production') { 
@@ -33,6 +34,7 @@ var apiOptions = {server : 'http://localhost:3000'};
             if (response.statusCode == 200) { 
             console.log("user registered"); 
             teampages.selectTeam(req,res);
+            
             } else { 
               res.render('register',{
                 title: 'Login',
@@ -40,6 +42,7 @@ var apiOptions = {server : 'http://localhost:3000'};
               })
             } 
         })
+        
   }
   else{
     res.render('register',{

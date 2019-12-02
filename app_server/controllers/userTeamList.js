@@ -42,6 +42,7 @@ const createUserTeam = function(req, res){
 
   const addSelectedPlayer = function(req, res){
     console.log("CCC")
+    console.log(req.params);
     var path = '/api/userteamPlayers';
        requestOptions={
          url: apiOptions.server + path,
@@ -50,7 +51,7 @@ const createUserTeam = function(req, res){
          },
          qs:{
            name:req.params.name,
-           number:3
+           number:req.params.number
          }
        } 
         request(
@@ -59,6 +60,7 @@ const createUserTeam = function(req, res){
             console.log(response.statusCode); 
             if (response.statusCode == 200) {
               console.log('EEE');
+              res.redirect('/select');
   
             } else{ 
             console.log("players not Found",err);

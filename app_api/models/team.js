@@ -55,7 +55,7 @@ const userSchema = new mongoose.Schema({
 const teamSchema = new mongoose.Schema({ 
     username:{
         type: String,
-    required: true
+    
 },
     team:[playerSchema]   
 });
