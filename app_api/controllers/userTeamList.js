@@ -101,6 +101,7 @@ var doAddPlayer = function(req,res,team){
 
 module.exports.teamPlayersAll = function(req, res){
     // send(res,100,"body.position");
+    console.log('B1')
     var username = "pcaff";
     if(username){
         team

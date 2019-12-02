@@ -18,9 +18,9 @@ block content
       .row
         .col-2.mt-5
           .h4.text-center Pick Team
-          //each player in players
-           // ul.list-group.mb-1
-               // a.list-group-item(href = "#" onclick=`addToArray(${JSON.stringify(player)})`)=player.name
+          each player in players
+            ul.list-group.mb-1
+                a.list-group-item(href = "#" onclick=`addToArray(${JSON.stringify(player)})`)=player.name
                 
         .col
           .row.mt-5
@@ -35,7 +35,7 @@ block content
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Hooker
                .card-body 
-                  .p.normal.text-center=playersel[3].name
+                  .p.normal.text-center=playersel[1].name
                 
               
                 

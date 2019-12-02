@@ -24,31 +24,22 @@ const createUserTeam = function(req, res){
           if (response.statusCode == 200) {
             console.log(body);
             res.render('select',{
-              title:'Team Display HEREEEEE', 
+              title:'Team Display', 
 
-              //players: body
+              //playersel: body
               
             })
 
           } else{ 
           console.log("players not Found",err);
-          res.render('display',{
-            title:'Team Display', 
+          res.render('select',{
+            title:'Team Select', 
           })
           } 
       })
 
 }
 
-// const createUserTeam = function(req, res){
-  
-//             res.render('select',{
-//               title:'Team Display HEREEEEE', 
-//               loosehead: loosehead
-              
-//             }) 
-      
-// }
 
 
 

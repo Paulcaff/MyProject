@@ -9,7 +9,41 @@ var apiOptions = {server : 'http://localhost:3000'};
     };
 
 /* GET home page */
-const selectTeam = function(req, res){
+ const selectTeam = function(req, res){
+   getAllPlayers(req, res);
+   //_renderSelectTeam(p, s);
+//   var path = '/api/userteam';
+//      requestOptions={
+//        url: apiOptions.server + path,
+//        method : 'GET',
+//        json :{         
+//        }
+//      } 
+//       request(
+//         requestOptions,
+//         function(err, response, body){
+//          // console.log(response); 
+//           if (response.statusCode == 200) {
+//             console.log(body);
+//             res.render('select',{
+//               title:'Team Display', 
+//               playersel: body
+              
+//             }) 
+
+//           } else{ 
+//           console.log("players not found");
+//           res.render('select',{
+//             title:'Team Select', 
+//           })
+//           } 
+//       })
+
+ }
+
+
+
+const getSelPlayers = function(req, res, p){
   var path = '/api/userteam';
      requestOptions={
        url: apiOptions.server + path,
@@ -22,21 +56,62 @@ const selectTeam = function(req, res){
         function(err, response, body){
          // console.log(response); 
           if (response.statusCode == 200) {
-            console.log(body);
+            console.log('BBB');
             res.render('select',{
-              title:'Team Display', 
-              playersel: body
-              
-            })
+             title:'Team Display', 
+             playersel: body,
+             players:p
+             
+            }) 
 
           } else{ 
-          console.log("players not dound",err);
-          res.render('display',{
-            title:'Team Display', 
+          console.log("players not found");
+          res.render('select',{
+            title:'Team Select', 
           })
           } 
       })
 
+}
+
+const getAllPlayers = function(req, res){
+  var path = '/api/players';
+     requestOptions={
+       url: apiOptions.server + path,
+       method : 'GET',
+       json :{         
+       }
+     } 
+      request(
+        requestOptions,
+        function(err, response, body){
+         // console.log(response); 
+          if (response.statusCode == 200) {
+            console.log('AAA');
+            getSelPlayers(req,res,body);
+          
+            //res.render('select',{
+            //  title:'Team Display', 
+            //  playersel: body
+            //  
+            //}) 
+
+          } else{ 
+          console.log("players not found");
+          res.render('select',{
+            title:'Team Select', 
+          })
+          } 
+      })
+
+}
+
+const _renderSelectTeam = function(players, selPlayers){
+  res.render('select', {
+    title:'Team Select',
+    players: players,
+    sel: selPlayers
+  })
 }
 
 const display = function(req, res){
