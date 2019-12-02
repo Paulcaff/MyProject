@@ -38,9 +38,39 @@ const createUserTeam = function(req, res){
           } 
       })
 
-}
+  }
+
+  const addSelectedPlayer = function(req, res){
+    console.log("CCC")
+    var path = '/api/userteamPlayers';
+       requestOptions={
+         url: apiOptions.server + path,
+         method : 'POST',
+         json :{       
+         },
+         qs:{
+           name:req.params.name,
+           number:3
+         }
+       } 
+        request(
+          requestOptions,
+          function(err, response, body){
+            console.log(response.statusCode); 
+            if (response.statusCode == 200) {
+              console.log('EEE');
+  
+            } else{ 
+            console.log("players not Found",err);
+            res.render('select',{
+              title:'Team Select', 
+            })
+            } 
+        })
+  
+  }
 
 
 
 
-module.exports = { createUserTeam };
+module.exports = { createUserTeam, addSelectedPlayer };

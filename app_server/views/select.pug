@@ -20,7 +20,7 @@ block content
           .h4.text-center Pick Team
           each player in players
             ul.list-group.mb-1
-                a.list-group-item(href = "#" onclick=`addToArray(${JSON.stringify(player)})`)=player.name
+                a.list-group-item(href=`../userteamPlayers/${player.name}/`)=player.name
                 
         .col
           .row.mt-5
@@ -35,7 +35,7 @@ block content
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Hooker
                .card-body 
-                  .p.normal.text-center=playersel[1].name
+                  .p.normal.text-center=playersel[2].name
                 
               
                 

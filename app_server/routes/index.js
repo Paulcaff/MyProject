@@ -22,5 +22,9 @@ router
 router
     .get('/userteam', ctrlUserTeam.createUserTeam);
 
+    //link to method to call api to add players to the selectedPlayersList
+router
+    .get('/userteamPlayers/:name', ctrlUserTeam.addSelectedPlayer);
+
 
 module.exports = router;

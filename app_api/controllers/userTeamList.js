@@ -52,11 +52,11 @@ module.exports.teamCreate = function(req, res){
  }
 
  module.exports.teamPlayersAdd = function(req, res){
-    // send(res,100,"body.position");
-    var username = req.body.username;
+    console.log('DDD')
+    var username = "pcaff";
     if(username){
         team
-        .find({username: req.body.username})
+        .find({username: "pcaff"})
             .exec(
                 function(err,team){
                     if(team.length == 0){
@@ -82,13 +82,13 @@ var doAddPlayer = function(req,res,team){
         send(res,404,"team not found");
     }
     else{
-        team.team.set(req.body.number -1,{
-            position: req.body.position,
-            name: req.body.name,
-            age: req.body.age,
-            weight: req.body.weight,
-            image: req.body.image,
-            number: req.body.number
+        team.team.set(req.query.number -1,{
+            //position: req.body.position,
+            name: req.query.name,
+            //age: req.body.age,
+            //weight: req.body.weight,
+            //image: req.body.image,
+            //number: req.body.number
 
         });
         team.save(function(err,team){

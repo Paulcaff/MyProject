@@ -228,6 +228,7 @@ module.exports.updateWeight = function(req, res){
     }
 }
 
+
 module.exports.deletePlayer = function(req, res){
     if(req.params){ 
         player

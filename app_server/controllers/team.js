@@ -57,6 +57,7 @@ const getSelPlayers = function(req, res, p){
          // console.log(response); 
           if (response.statusCode == 200) {
             console.log('BBB');
+            console.log(body);
             res.render('select',{
              title:'Team Display', 
              playersel: body,
