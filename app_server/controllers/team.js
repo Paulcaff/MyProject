@@ -40,9 +40,7 @@ var apiOptions = {server : 'http://localhost:3000'};
 //       })
 
  }
-
-
-
+ 
 const getSelPlayers = function(req, res, p){
   var path = '/api/userteam';
      requestOptions={

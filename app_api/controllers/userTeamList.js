@@ -45,9 +45,6 @@ module.exports.teamCreate = function(req, res){
                     for(var i=0; i<15; i++){
                           team.team.set(i,{
                               name: "",
-                       // team.team.insert({"name":["","","","","","","","","","","","","","",""]})
-                         
-                
                          });
                         team.save(function(err,team){
                             if(err){
@@ -113,7 +110,7 @@ var doAddPlayer = function(req,res,team){
 }
 
 module.exports.teamPlayersAll = function(req, res){
-    // send(res,100,"body.position");
+    
     console.log('B1')
     var username = "oooo";
     if(username){
