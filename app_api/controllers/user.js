@@ -35,6 +35,7 @@ module.exports.findUserByUsername = function(req, res){
                     }
 
                     else{
+                        
                         send (res, 200, user);
                     }
                 });
@@ -45,8 +46,51 @@ module.exports.findUserByUsername = function(req, res){
         }
 }
 
+module.exports.teamCreate = function(req, res){
+    // send(res,100,"body.position");
+    console.log("getting called OOOOOOOOOOOOOOOO")
+     if(req.params){
+          
+         team
+             .create({
+                 username: req.body.username,
+                 team: [{}]
+                  
+             },            
+             function(err, team){
+                
+                  if(err){ 
+                      console.log("here"+ err)
+                     send (res, 404, err);
+                 }
+                 else{
+                    for(var i=0; i<15; i++){
+                         team.team.set(i,{
+                             name: "",
+                         
+                
+                        });
+                        team.save(function(err,team){
+                            if(err){
+                                send(res,400,err);
+                            }
+                        })
+                    } 
+                    
+                    send (res, 200, team);
+
+                 }
+             });
+    
+     }
+     else{
+         send (res, 404, "URL Problem");
+         console.log("here"+ err)
+     }
+ }
+
 module.exports.createUser = function(req, res){
-  
+
         if(req.params){
             
             user
@@ -63,6 +107,7 @@ module.exports.createUser = function(req, res){
                         send (res, 404, err);
                     }
                     else{
+                       // teamCreate(req,res);
                         send (res, 200, user);
                     }
                 });
@@ -72,49 +117,6 @@ module.exports.createUser = function(req, res){
             send (res, 404, "URL Problem");
         }
 
-        module.exports.teamCreate = function(req, res){
-            // send(res,100,"body.position");
-            
-             if(req.params.username){
-                console.log("getting called OOOOOOOOOOOOOOOO") 
-                 team
-                     .create({
-                         username: req.body.username,
-                         team: [{}]
-                          
-                     },            
-                     function(err, team){
-                        
-                          if(err){ 
-                              console.log("here"+ err)
-                             send (res, 404, err);
-                         }
-                         else{
-                            for(var i=0; i<15; i++){
-                                team.team.set(i,{
-                                    
-                                    name: "",
-                                   
-                        
-                                });
-                                team.save(function(err,team){
-                                    if(err){
-                                        send(res,400,err);
-                                    }
-                                })
-                            } 
-                            
-                            send (res, 200, team);
-        
-                         }
-                     });
-            
-             }
-             else{
-                 send (res, 404, "URL Problem");
-                 console.log("here"+ err)
-             }
-         }
   
  }
 

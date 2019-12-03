@@ -24,7 +24,7 @@ const createUserTeam = function(req, res){
           if (response.statusCode == 200) {
             console.log(body);
             res.render('select',{
-              title:'Team Display', 
+              title:'Team Selection', 
 
               //playersel: body
               
@@ -63,7 +63,7 @@ const createUserTeam = function(req, res){
               res.redirect('/select');
   
             } else{ 
-            console.log("players not Found",err);
+            console.log("players not Found here",err);
             res.render('select',{
               title:'Team Select', 
             })
@@ -71,6 +71,50 @@ const createUserTeam = function(req, res){
         })
   
   }
+
+  module.exports.teamCreate = function(req, res){
+    // send(res,100,"body.position");
+    
+     if(req.params.username){
+        console.log("getting called OOOOOOOOOOOOOOOO") 
+         team
+             .create({
+                 username: req.body.username,
+                 team: [{}]
+                  
+             },            
+             function(err, team){
+                
+                  if(err){ 
+                      console.log("here"+ err)
+                     send (res, 404, err);
+                 }
+                 else{
+                    for(var i=0; i<15; i++){
+                        team.team.set(i,{
+                            
+                            name: "",
+                           
+                
+                        });
+                        team.save(function(err,team){
+                            if(err){
+                                send(res,400,err);
+                            }
+                        })
+                    } 
+                    
+                    send (res, 200, team);
+
+                 }
+             });
+    
+     }
+     else{
+         send (res, 404, "URL Problem");
+         console.log("here"+ err)
+     }
+ }
 
 
 

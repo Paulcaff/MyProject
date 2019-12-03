@@ -3,12 +3,19 @@ extends layout
 block content
   h1= title
 
+  .row
+    .col
+    .col.text-center.my-size
+
+      a.btn.btn-primary(href=`../userteamdisplay/` role='button') Show Team Selection
+    .col
+
   .row.mt-5
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: LooseHead Prop
         .card-body
-          <img src="../../images/pic1.jpg" alt="Snow" style="width:100%">
+          <img src=playersel[0].image alt="Snow" style="width:100%">
           p Player Name :
           p Player Weight :
           p Age :
@@ -24,7 +31,7 @@ block content
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Tighthead Prop
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
+          <img src="../images/healy.jpg" alt="Snow" style="width:100%">
           p Player Name :
           p Player Weight :
           p Age :

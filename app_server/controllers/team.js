@@ -59,7 +59,7 @@ const getSelPlayers = function(req, res, p){
             console.log('BBB');
             console.log(body);
             res.render('select',{
-             title:'Team Display', 
+             title:'Team Selection', 
              playersel: body,
              players:p
              
@@ -74,6 +74,7 @@ const getSelPlayers = function(req, res, p){
       })
 
 }
+
 
 const getAllPlayers = function(req, res){
   var path = '/api/players';
@@ -117,7 +118,7 @@ const _renderSelectTeam = function(players, selPlayers){
 
 const display = function(req, res){
 
-  var path = '/api/players';
+  var path = '/api/userteam';
      requestOptions={
        url: apiOptions.server + path,
        method : 'GET',

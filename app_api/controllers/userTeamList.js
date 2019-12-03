@@ -41,13 +41,14 @@ module.exports.teamCreate = function(req, res){
                      send (res, 404, err);
                  }
                  else{
+                     console.log("broke here");
                     for(var i=0; i<15; i++){
-                        team.team.set(i,{
-                            
-                            name: "",
-                           
+                          team.team.set(i,{
+                              name: "",
+                       // team.team.insert({"name":["","","","","","","","","","","","","","",""]})
+                         
                 
-                        });
+                         });
                         team.save(function(err,team){
                             if(err){
                                 send(res,400,err);
@@ -69,10 +70,10 @@ module.exports.teamCreate = function(req, res){
 
  module.exports.teamPlayersAdd = function(req, res){
     console.log('DDD')
-    var username = req.params.username;
+    var username = "oooo";
     if(username){
         team
-        .find({username: req.params.username})
+        .find({username: "oooo"})
             .exec(
                 function(err,team){
                     if(team.length == 0){
@@ -114,10 +115,10 @@ var doAddPlayer = function(req,res,team){
 module.exports.teamPlayersAll = function(req, res){
     // send(res,100,"body.position");
     console.log('B1')
-    var username = "pcaff";
+    var username = "oooo";
     if(username){
         team
-        .find({username: "pcaff"})
+        .find({username: "oooo"})
             .exec(
                 function(err,team){
                     if(team.length == 0){
@@ -134,6 +135,7 @@ module.exports.teamPlayersAll = function(req, res){
         send(res,404, "not Found, username required");
     }
 }
+
 
  var send = function(res, status, content){
     res.status(status);

@@ -72,7 +72,10 @@ router
 
   router
   .route('/userteamPlayers')
-  .post(ctrlUserTeams.teamPlayersAdd);
+  .post(ctrlUserTeams.teamPlayersAdd)
+  .get(ctrlUserTeams.teamPlayersAll);
+
+
   
 
 

@@ -9,7 +9,7 @@ block content
     .col.text-center.my-size
        form(action="/", method="post")
         .form-group
-          label(for='username') Team Name
+          label(for='username')
           input#username.form-control.is-valid(type='text' name='username')
     .col
  
@@ -28,14 +28,22 @@ block content
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                 .card-header.my-size LooseHead Prop
                 .card-body
-                 .p.normal.text-center=playersel[0].name 
+                - var name=playersel[0]
+                -if (name)    
+                  .p.normal.text-center=playersel[0].name
+                -else    
+                  .p.normal.text-center 
                 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Hooker
-               .card-body 
-                  .p.normal.text-center=playersel[14].name
+               .card-body
+                - var name=playersel[1]
+                -if (name)    
+                  .p.normal.text-center=playersel[1].name
+                -else    
+                  .p.normal.text-center 
                 
               
                 
@@ -43,82 +51,135 @@ block content
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Tighthead Prop
                .card-body
-                  .p.normal.text-center Name:
+                - var name=playersel[2]
+                -if (name)    
+                  .p.normal.text-center=playersel[2].name
+                -else    
+                  .p.normal.text-center 
           
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-               .card-header.my-size Number 4
+               .card-header.my-size Second Row
                .card-body
+                - var name=playersel[3]
+                -if (name)    
+                  .p.normal.text-center=playersel[3].name
+                -else    
+                  .p.normal.text-center 
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+               .card-header.my-size Second Row
+               .card-body
+                - var name=playersel[4]
+                -if (name)    
+                  .p.normal.text-center=playersel[4].name
+                -else    
+                  .p.normal.text-center 
+                
+            .col
+              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
+               .card-header.my-size Blindside Flanker
+               .card-body
+                - var name=playersel[5]
+                -if (name)    
+                  .p.normal.text-center=playersel[5].name
+                -else    
                   .p.normal.text-center
-                
-            .col
-              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-               .card-header.my-size Number 5
-               .card-body
-                 .p.normal.text-center Name:
-                
-            .col
-              .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-               .card-header.my-size Tighthead Prop
-               .card-body
-                  .p.normal.text-center Name:
           
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
-               .card-header.my-size LooseHead Prop
+               .card-header.my-size Openside Flanker
                .card-body
-                  .p.normal.text-center Name:
+                - var name=playersel[6]
+                -if (name)    
+                  .p.normal.text-center=playersel[6].name
+                -else    
+                  .p.normal.text-center 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Number 8
                .card-body
-                 .p.normal.text-center Name:
+                - var name=playersel[7]
+                -if (name)    
+                  .p.normal.text-center=playersel[7].name
+                -else    
+                  .p.normal.text-center 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Scrumhalf
                .card-body
-                 .p.normal.text-center Name:
+                - var name=playersel[8]
+                -if (name)    
+                  .p.normal.text-center=playersel[8].name
+                -else    
+                  .p.normal.text-center
+
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Outhalf
                .card-body
-                  .p.normal.text-center Name:
+                - var name=playersel[9]
+                -if (name)    
+                  .p.normal.text-center=playersel[9].name
+                -else    
+                  .p.normal.text-center
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Inside Center
                .card-body
-                 .p.normal.text-center Name:
+                - var name=playersel[10]
+                -if (name)    
+                  .p.normal.text-center=playersel[10].name
+                -else    
+                  .p.normal.text-center 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Outside Center
                .card-body
-                  .p.normal.text-center Name:
+                - var name=playersel[11]
+                -if (name)    
+                  .p.normal.text-center=playersel[11].name
+                -else    
+                  .p.normal.text-center
 
           .row.mt-5
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Left Wing
                .card-body
-                 .p.normal.text-center Name:
+                - var name=playersel[12]
+                -if (name)    
+                  .p.normal.text-center=playersel[12].name
+                -else    
+                  .p.normal.text-center 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Full Back
                .card-body
-                  .p.normal.text-center Name:
+                - var name=playersel[14]
+                -if (name)    
+                  .p.normal.text-center=playersel[14].name
+                -else    
+                  .p.normal.text-center 
                 
             .col
               .card.bg-transparent.text-dark.w-75.ml-auto.mr-auto.border-0
                .card-header.my-size Right Wing
                .card-body
-                 .p.normal.text-center Name:
+                - var name=playersel[13]
+                -if (name)    
+                  .p.normal.text-center=playersel[13].name
+                -else    
+                  .p.normal.text-center 
 
    
            
