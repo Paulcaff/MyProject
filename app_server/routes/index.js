@@ -24,7 +24,7 @@ router
 
     //link to method to call api to add players to the selectedPlayersList
 router
-    .get('/userteamPlayers/:name/:number/:image/:age/:weight', ctrlUserTeam.addSelectedPlayer);
+    .get('/userteamPlayers/:name/:number', ctrlUserTeam.addSelectedPlayer);
 
 
     router

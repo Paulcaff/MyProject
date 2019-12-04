@@ -23,8 +23,7 @@ var apiOptions = {server : 'http://localhost:3000'};
           lastname : req.body.lastname,
           username : req.body.username,
           email : req.body.email,
-          password : req.body.password,
-          
+          password : req.body.password, 
         }
       } 
         request(

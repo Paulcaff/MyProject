@@ -51,7 +51,10 @@ const createUserTeam = function(req, res){
          },
          qs:{
            name:req.params.name,
-           number:req.params.number
+           number:req.params.number,
+           age:req.params.age,
+           weight: req.params.weight,
+           image: req.params.image
          }
        } 
         request(

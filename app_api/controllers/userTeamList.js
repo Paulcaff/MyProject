@@ -91,14 +91,17 @@ module.exports.teamCreate = function(req, res){
 
 
 var doAddPlayer = function(req,res,team){
-   console.log("Team" + team.username);
+   console.log("Team age" + req.query.number);
     if(!team){
         send(res,404,"team not found");
     }
     else{
         team.team.set(req.query.number -1,{
             
-            name: req.query.name,        
+            name: req.query.name, 
+            age: req.query.age,
+            weight: req.query.weight,
+            image: req.query.image       
 
         });
         team.save(function(err,team){
