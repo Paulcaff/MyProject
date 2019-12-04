@@ -98,7 +98,10 @@ var doAddPlayer = function(req,res,team){
     else{
         team.team.set(req.query.number -1,{
             
-            name: req.query.name,         
+            name: req.query.name,
+            image: req.query.image,
+            weight: req.query.weight,
+            age: req.query.age         
 
         });
         team.save(function(err,team){
@@ -119,7 +122,7 @@ module.exports.teamPlayersAll = function(req, res){
             .exec(
                 function(err,team){
                     if(team.length == 0){
-                        send (res, 400, "the user was not found");
+                        send (res, 400, "the team was not found");
                     }
                     else{
                         console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXX")

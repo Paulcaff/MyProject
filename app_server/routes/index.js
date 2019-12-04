@@ -27,6 +27,7 @@ router
     .get('/userteamPlayers/:name/:number', ctrlUserTeam.addSelectedPlayer);
 
 
-
+    router
+    .get('/about', ctrlTeam.about);
 
 module.exports = router;

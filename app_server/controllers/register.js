@@ -46,7 +46,7 @@ var apiOptions = {server : 'http://localhost:3000'};
   }
   else{
     res.render('register',{
-      title: 'Login',
+      title: 'Register',
       message: 'Passwords not matching !!! Create account to log in'  
     }) 
   } 

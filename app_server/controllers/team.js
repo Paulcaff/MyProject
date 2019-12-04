@@ -135,15 +135,16 @@ const display = function(req, res){
               
             })
 
-          } else{ 
-          console.log("players not found",err);
-          res.render('display',{
-            title:'Team Display', 
-          })
           } 
       })
 
   
 }
 
-module.exports = { selectTeam, display,getPlayers };
+const about = function(req,res){
+  res.render('about', {
+    
+  })
+}
+
+module.exports = { selectTeam, display,getPlayers,about };
