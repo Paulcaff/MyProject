@@ -98,10 +98,7 @@ var doAddPlayer = function(req,res,team){
     else{
         team.team.set(req.query.number -1,{
             
-            name: req.query.name,
-            image: req.query.image,
-            weight: req.query.weight,
-            age: req.query.age         
+            name: req.query.name,        
 
         });
         team.save(function(err,team){

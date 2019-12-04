@@ -8,128 +8,219 @@ block content
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: LooseHead Prop
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p=players[0].name
-          p=players[0].weight
-          p=players[0].name
+          
+        - var name=players[0]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[0].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+          
           
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Hooker
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[1]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[2].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Tighthead Prop
         .card-body
-          <img src="../images/healy.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[2]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[2].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
 
   .row.mt-5
     .col-4.offset-2
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Second Row
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[3]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[3].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col-4
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Second Row
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[4]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[4].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
 
   .row.mt-5
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Blindside Flanker
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[5]
+        -if (name) 
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">   
+          .p.normal.text-center=players[5].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position:  Openside Flanker
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :p Age :
+        - var name=players[6]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[6].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Number 8
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[7]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[7].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
 
   .row.mt-5
     .col-4.offset-2
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Scrumhalf
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[8]
+        -if (name) 
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">   
+          .p.normal.text-center=players[8].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col-4
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Flyhalf
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[9]
+        -if (name) 
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">   
+          .p.normal.text-center=players[9].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
   .row.mt-5
     .col-4.offset-2
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Inside Center
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[10]
+        -if (name) 
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">   
+          .p.normal.text-center=players[10].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col-4
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Outside Center
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[11]
+        -if (name) 
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">   
+          .p.normal.text-center=players[11].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
 
   .row.mt-5
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Right Winger
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+        - var name=players[12]
+        -if (name) 
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">   
+          .p.normal.text-center=players[12].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Fullback
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+          
+        - var name=players[0]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[14].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
+
     .col
       .card.bg-light.text-dark.w-50.ml-auto.mr-auto
         .card-header.text-center Position: Left Winger
         .card-body
-          <img src="../images/pic1.jpg" alt="Snow" style="width:100%">
-          p Player Name :
-          p Player Weight :
-          p Age :
+          
+        - var name=players[14]
+        -if (name)
+          <img src="../images/healy.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center=players[13].name
+          .p.normal.text-center Weight:
+          .p.normal.text-center Age:
+        -else
+          <img src="../images/blank.jpg" alt="LooseHead" style="width:100%">    
+          .p.normal.text-center Not Picked
