@@ -9,25 +9,25 @@ block content
       form(action="/register", method="post")
         .form-group
           label(for='firstname') First Name
-          input#username.form-control.is-valid(type='text' name="firstname")
+          input#username.form-control.is-valid(type='text' name="firstname" required)
         .form-group
         .form-group
           label(for='lastname') Last  Name
-          input#username.form-control.is-valid(type='text' name="lastname")
+          input#username.form-control.is-valid(type='text' name="lastname" required)
         .form-group
         .form-group
           label(for='username') Username
-          input#username.form-control.is-valid(type='text' name="username")
+          input#username.form-control.is-valid(type='text' name="username" required)
         .form-group
         .form-group
           label(for='email') Email
-          input#username.form-control.is-valid(type='text' name="email")
+          input#username.form-control.is-valid(type='text' name="email" required)
         .form-group
           label(for='password') Enter Password
-          input#password.form-control.is-valid(type='password' name="password")
+          input#password.form-control.is-valid(type='password' name="password" required)
         .form-group
           label(for='password2') Confirm Password
-          input#password2.form-control.is-valid(type='password' name="confirm")
+          input#password2.form-control.is-valid(type='password' name="confirm" required)
         .text-center    
           button.btn.btn-primary.text-center(type = "submit") Register
     .col.bgimgLogin
